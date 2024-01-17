@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container version="2">
+  <Name>neo-server</Name>
+  <Repository>syiana/neo-server:latest</Repository>
+  <Registry>https://hub.docker.com/r/syiana/neo-server/</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://your-support-url</Support>
+  <Project>https://your-project-url</Project>
+  <Overview>Your brief description</Overview>
+  <Category>Media</Category>
+  <WebUI>http://[IP]:[PORT:8088]/</WebUI>
+  <TemplateURL>https://your-template-url</TemplateURL>
+  <Icon>https://your-icon-url</Icon>
+  <ExtraParams></ExtraParams>
+  <DateInstalled></DateInstalled>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8088</HostPort>
+        <ContainerPort>8088</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+</Container>

@@ -4,8 +4,9 @@
   "description": "Mediola Neo-Server Docker",
   "main": "index.js",
   "scripts": {
-    "build": "docker build -t neo-server .",
-    "start": "docker run -d -p 8088:8088 neo-server"
+    "build": "docker build -t syiana/neo-server:latest .",
+    "start": "docker run -d -p 8088:8088 neo-server",
+    "publish": "docker push syiana/neo-server:latest"
   },
   "author": "",
   "license": "ISC"
