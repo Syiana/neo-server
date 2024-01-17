@@ -1,0 +1,12 @@
+{
+  "name": "neo-server",
+  "version": "1.0.0",
+  "description": "Mediola Neo-Server Docker",
+  "main": "index.js",
+  "scripts": {
+    "build": "docker build -t neo-server .",
+    "start": "docker run -d -p 8088:8088 neo-server"
+  },
+  "author": "",
+  "license": "ISC"
+}

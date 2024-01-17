@@ -1,20 +1,15 @@
-# Verwenden Sie ein offizielles Node.js-LTS-Laufzeit-Image als Basis
-FROM node:lts
-
-# Setzen Sie das Arbeitsverzeichnis in dem Container
+# create image from node
+FROM node:lts-alpine
 WORKDIR /usr/src/app
 
-# Kopieren Sie die Paket.json und Paket-Lock.json Dateien in das Arbeitsverzeichnis
+# copy package.json
 COPY server/package*.json ./
-
-# Installieren Sie die Anwendung
 RUN npm install
 
-# Kopieren Sie den Server-Ordner in das Arbeitsverzeichnis
+# copy source code
 COPY server/ ./server/
 
-# Exponieren Sie den Port, auf dem die Anwendung läuft
-EXPOSE 8080
-
-# Definieren Sie den Befehl zum Ausführen der Anwendung
+# expose port 8088
+EXPOSE 8088
+# start app
 CMD [ "node", "server/automation.js" ]
